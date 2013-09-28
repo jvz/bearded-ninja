@@ -3,6 +3,15 @@ class PostsController < ApplicationController
   end
   
   def create
-    render text: params[:post].inspect
+    @post = Post.new(post_params)
+    
+    @post.save
+    redirect_to @post
+  end
+  
+  # security enforcement
+  private
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end
