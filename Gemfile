@@ -30,7 +30,9 @@ gem 'jbuilder', '~> 1.2'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+  gem 'RedCloth'
 end
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -43,3 +45,4 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
