@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+  has_many :comments
   validates :title, presence: true, length: { minimum: 5 }
   # here are alternate ways that line could have been done using
   # separate validators (also from TM bundle macros)
